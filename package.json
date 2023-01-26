@@ -2,8 +2,9 @@
   "name": "character-conversion",
   "displayName": "Character Conversion",
   "publisher": "taiyuuki",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "icon": "res/icon.png",
+  "description": "Convert characters to other characters via decorator.",
   "main": "./dist/index.js",
   "repository": {
     "type": "git",
@@ -15,8 +16,7 @@
     "vscode": "^1.74.0"
   },
   "categories": [
-    "Visualization",
-    "Other"
+    "Visualization"
   ],
   "activationEvents": [
     "onLanguage:html",
@@ -24,11 +24,7 @@
     "onLanguage:javascriptreact",
     "onLanguage:typescript",
     "onLanguage:typescriptreact",
-    "onLanguage:vue-html",
     "onLanguage:vue",
-    "onLanguage:markdown",
-    "onLanguage:ejs",
-    "onLanguage:php",
     "onLanguage:svelte"
   ],
   "contributes": {
@@ -77,10 +73,8 @@
   },
   "keywords": [
     "arrow",
-    "conversion",
     "箭头",
-    "转换",
-    "好看"
+    "显示"
   ],
   "author": "taiyuuki <taiyuuki@qq.com>",
   "license": "MIT",
