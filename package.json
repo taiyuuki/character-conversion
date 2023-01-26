@@ -1,0 +1,98 @@
+{
+  "name": "character-conversion",
+  "displayName": "Character Conversion",
+  "publisher": "taiyuuki",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taiyuuki/character-conversion"
+  },
+  "bugs": "https://github.com/taiyuuki/character-conversion/issues",
+  "homepage": "https://github.com/taiyuuki/character-conversion#readme",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue-html",
+    "onLanguage:vue",
+    "onLanguage:markdown",
+    "onLanguage:ejs",
+    "onLanguage:php",
+    "onLanguage:svelte"
+  ],
+  "contributes": {
+    "configuration": [
+      {
+        "title": "Character Conversion",
+        "properties": {
+          "characterConversion.arrow": {
+            "type": "string",
+            "default": "⇒"
+          },
+          "characterConversion.equal": {
+            "type": "string",
+            "default": "＝"
+          },
+          "characterConversion.notequal": {
+            "type": "string",
+            "default": "≠"
+          },
+          "characterConversion.notless": {
+            "type": "string",
+            "default": "≧"
+          },
+          "characterConversion.notmore": {
+            "type": "string",
+            "default": "≦"
+          },
+          "characterConversion.rules": {
+            "type": "array",
+            "description": "Writing custom rules for character conversion.",
+            "default": [],
+            "items": []
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts ./",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "bump:patch": "bump patch",
+    "package": "vsce package --no-dependencies",
+    "publish": "vsce publish",
+    "test": "vitest"
+  },
+  "keywords": [
+    "arrow",
+    "conversion",
+    "箭头",
+    "转换",
+    "好看"
+  ],
+  "author": "taiyuuki <taiyuuki@qq.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@taiyuuki/eslint-config-ts": "^0.0.5",
+    "@types/node": "^12.20.55",
+    "@types/vscode": "^1.74.0",
+    "@vscode/test-electron": "^2.2.2",
+    "eslint": "^8.10.0",
+    "tsup": "^6.4.0"
+  }
+}
