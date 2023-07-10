@@ -15,16 +15,18 @@ Languages:  `html` `javascript` `typescript` `react` `vue` `svelte`
 | `characterConversion.notmore`  | `<=`           | `≦`                |
 | `characterConversion.rules`    | `any`          | `any`              |
 
+If you don't want to convert a certain character, you can leave it blank.
+
 You can convert any characters by yourself via `characterConversion.rules`. For Example:
 
-Convert the `? `mark to `√`
+Convert the `->` mark to `➝`
 
 `settings.json`
 
 ```json
 {
     "characterConversion.rules": [
-        ["\\?", "√"],
+        ["->", "➝"],
     ]
 }
 ```

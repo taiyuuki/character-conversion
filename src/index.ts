@@ -9,11 +9,16 @@ export function activate(context: vscode.ExtensionContext) {
 
   function setScope() {
     conversion.clear()
-    conversion.add(/=>/g, config.characterConversion.arrow)
-    conversion.add(/===?/g, config.characterConversion.equal)
-    conversion.add(/!==?/g, config.characterConversion.notequal)
-    conversion.add(/>=/g, config.characterConversion.notless)
-    conversion.add(/<=/g, config.characterConversion.notmore)
+    isNotEmptyString(config.characterConversion.arrow)
+    && conversion.add(/=>/g, config.characterConversion.arrow)
+    isNotEmptyString(config.characterConversion.equal)
+    && conversion.add(/===?/g, config.characterConversion.equal)
+    isNotEmptyString(config.characterConversion.notequal)
+    && conversion.add(/!==?/g, config.characterConversion.notequal)
+    isNotEmptyString(config.characterConversion.notless)
+    && conversion.add(/>=/g, config.characterConversion.notless)
+    isNotEmptyString(config.characterConversion.notmore)
+    && conversion.add(/<=/g, config.characterConversion.notmore)
 
     const rules = config.characterConversion.rules as [string, string, number | undefined][]
     rules.forEach(rule => {

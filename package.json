@@ -2,7 +2,7 @@
   "name": "character-conversion",
   "displayName": "Character Conversion",
   "publisher": "taiyuuki",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "res/icon.png",
   "description": "Convert characters to other characters via decorator.",
   "main": "./dist/index.js",
@@ -87,6 +87,7 @@
     "@types/vscode": "^1.74.0",
     "@vscode/test-electron": "^2.2.2",
     "eslint": "^8.10.0",
-    "tsup": "^6.4.0"
+    "tsup": "^6.4.0",
+    "vsce": "^2.15.0"
   }
 }
