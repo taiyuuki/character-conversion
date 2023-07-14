@@ -33,7 +33,6 @@ Convert the `->` mark to `➝`
 
 The format of each item is [`origin`, `target`, `group`] 
 
-* `origin` - string - Regex in string format.
-
+* `origin` - string - Regex in string format. Note the characters that need to be escaped.
 * `target` - string - Target characters for conversion.
 * `group` - number - Regex group that match the characters  that should be converted, default is 0.

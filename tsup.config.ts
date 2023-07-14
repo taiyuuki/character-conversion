@@ -9,5 +9,8 @@ export default defineConfig({
   external: [
     'vscode',
   ],
+  noExternal: [
+    '@taiyuuki/utils',
+  ],
   format: ['cjs'],
 })

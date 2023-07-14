@@ -60,8 +60,13 @@ export class CharacterConversion {
         let match = item.reg.exec(code)
         item.decorationOptions.length = 0
         while (match && match[item.group]) {
-          const start = editor.document.positionAt(match.index)
-          const end = editor.document.positionAt(match.index + match[item.group].length)
+          const groupStartIndex = match.index + match[0].indexOf(match[item.group])
+          const groupEndIndex = groupStartIndex + match[item.group].length
+          if (groupEndIndex === code.length) {
+            break
+          }
+          const start = editor.document.positionAt(groupStartIndex)
+          const end = editor.document.positionAt(groupEndIndex)
           const range = new Range(start, end)
           if (selectPst.isBefore(start) || selectPst.isAfter(end)) {
             item.decorationOptions.push({ range })

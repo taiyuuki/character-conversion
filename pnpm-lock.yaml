@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  '@taiyuuki/utils':
+    specifier: ^0.4.5
+    version: 0.4.5
+
 devDependencies:
   '@taiyuuki/eslint-config-ts':
     specifier: ^0.0.5
@@ -131,6 +136,10 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
     dev: true
+
+  /@taiyuuki/utils@0.4.5:
+    resolution: {integrity: sha512-XLhkgshS9+O5cQX8P7WRiH2gRknOAt0KvWWZa1jetLsNJOx9mglnCbuiPoY/jZ+30wr//g6iEBGU+UROnuz4ig==}
+    dev: false
 
   /@tootallnate/once@1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}

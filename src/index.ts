@@ -1,7 +1,8 @@
 import type * as vscode from 'vscode'
 import { window, workspace } from 'vscode'
 import { CharacterConversion } from './conversion'
-import { isNotEmptyString, throttle } from './utils'
+import { isNotEmptyString } from './utils'
+import { throttle } from '@taiyuuki/utils'
 
 export function activate(context: vscode.ExtensionContext) {
   const conversion = new CharacterConversion()
